@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registro de estudiantes</title>
+  <link rel="stylesheet" href="/estilos.css">
+</head>
+
+<body>
+  <main>
+    <h1>Registro de estudiantes</h1>
+
+    <!-- Un solo formulario con dos botones: uno envía por GET y otro por POST. -->
+    <form action="/registro-get" method="GET">
+      <label for="nombre">Nombre</label>
+      <input type="text" id="nombre" name="nombre" placeholder="Ingrese su nombre">
+
+      <label for="apellido">Apellido</label>
+      <input type="text" id="apellido" name="apellido" placeholder="Ingrese su apellido">
+
+      <label for="edad">Edad</label>
+      <input type="number" id="edad" name="edad" placeholder="Ingrese su edad">
+
+      <label for="correo">Correo electrónico</label>
+      <input type="email" id="correo" name="correo" placeholder="correo@ejemplo.com">
+
+      <label for="programa">Programa académico</label>
+      <select id="programa" name="programa">
+        <option value="">Seleccione un programa</option>
+        <option value="Ingeniería de Sistemas">Ingeniería de Sistemas</option>
+        <option value="Ingeniería Industrial">Ingeniería Industrial</option>
+        <option value="Administración de Empresas">Administración de Empresas</option>
+        <option value="Derecho">Derecho</option>
+        <option value="Psicología">Psicología</option>
+      </select>
+
+      <div class="botones">
+        <button type="submit" class="get" formaction="/registro-get" formmethod="get">Enviar por GET</button>
+        <button type="submit" class="post" formaction="/registro-post" formmethod="post">Enviar por POST</button>
+      </div>
+    </form>
+
+    <a class="volver secundario" href="/usuarios">Ver usuarios registrados</a>
+  </main>
+</body>
+
+</html>
